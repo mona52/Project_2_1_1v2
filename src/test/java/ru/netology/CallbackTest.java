@@ -35,7 +35,7 @@ class CallbackTest {
     void shouldStopIfUncorrectNameWithNumbers() {
         open ("http://localhost:9999");
         ElementsCollection inputs = $$ (".input__control");
-        inputs.find(Condition.attribute("type","text")).setValue("Николай -й");
+        inputs.find(Condition.attribute("type","text")).setValue("Николай 1-й");
         inputs.find(Condition.attribute("type","tel")).setValue("+79850000000");
         $(".checkbox__box").click();
         $(".button").click();
